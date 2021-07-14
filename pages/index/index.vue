@@ -1,9 +1,22 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+        <!-- 仓库信息-名字/头像等 -->
+		<view class="top">
+            仓库信息-名字/头像等
 		</view>
+        <!-- 内容区域-功能模块-可上下滚动 -->
+        <view class="center">
+            内容区域-功能模块-可上下滚动
+        </view>
+        <!-- 底部按钮-首页/我的/二维码扫描 -->
+        <view class="bottomBtn">
+            <button type="default">首页</button>
+            <!-- 二维码扫描按钮 -->
+            <view class="qrCode">
+                <icon type="search" size="26"/>
+            </view>
+            <button type="default">我的</button>
+        </view>
 	</view>
 </template>
 
@@ -11,7 +24,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
 			}
 		},
 		onLoad() {
@@ -23,30 +36,32 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.content {
+        height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+        
+        // 头部
+        .top{
+            height: 100rpx;
+            width: 100%;
+            background: #007AFF;
+        }
+        
+        .center{
+            flex: 1;
+            background: #333333;
+            width: 100%;
+        }
+        
+        .bottomBtn{
+            height: 100px;
+            width: 100%;
+            background: #C8C7CC;
+            overflow: hidden;
+        }
 	}
 </style>
