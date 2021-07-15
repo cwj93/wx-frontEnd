@@ -5,8 +5,25 @@
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
-		}
+		},
+        {
+        	"path": "pages/my/my",
+        	"style": {
+        		"navigationBarTitleText": "我的"
+        	}
+        }
 	],
+    "subPackages": [ // 分包加载配置
+        {
+            "root": "pagesShipment",
+            "pages": [{
+                "path": "shipment/shipment",
+                "style": {
+                    "navigationBarTitleText": "新增出货流转单"
+                }
+            }]
+        }
+    ],
 	"globalStyle": { // 用于设置应用的状态栏、导航条、标题、窗口背景色等
 		"navigationBarTextStyle": "black", // 导航栏标题颜色及状态栏前景颜色，仅支持 black/white
 		"navigationBarTitleText": "柠檬仓储", // 导航栏标题文字内容

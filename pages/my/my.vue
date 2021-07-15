@@ -15,7 +15,7 @@
 		</view>
         <!-- 内容区域-功能模块-可上下滚动 -->
         <view class="center">
-            <view class="fun-wrap">
+            <view class="fun-wrap" v-if="false">
                 <view class="fun-title">货品流转</view>
                 <view class="fun-box">
                     <view class="fun-item" @click="toNextPage('出货')">
@@ -38,32 +38,6 @@
                             <uni-badge class="fun-badge-style" :text="10" type="primary"> </uni-badge>
                         </view>
                         <text class="fun-text">收货</text>
-                    </view>
-                </view>
-            </view>
-            <view class="fun-wrap">
-                <view class="fun-title">更多功能</view>
-                <view class="fun-box">
-                    <view class="fun-item">
-                        <view class="fun-content">
-                            <image class="fun-content-size" src="../../static/qrCode.jpg" mode="一物一码绑定"></image>
-                            <uni-badge class="fun-badge-style" :text="10" type="primary"> </uni-badge>
-                        </view>
-                        <text class="fun-text">一物一码绑定</text>
-                    </view>
-                    <view class="fun-item">
-                        <view class="fun-content">
-                            <image src="../../static/query.jpg" class="fun-content-size" mode="流转查询"></image>
-                            <uni-badge v-if="false" class="fun-badge-style" :text="10" type="primary"> </uni-badge>
-                        </view>
-                        <text class="fun-text">流转查询</text>
-                    </view>
-                    <view class="fun-item">
-                        <view class="fun-content">
-                            <image src="../../static/inventory.jpg" class="fun-content-size" mode="库存"></image>
-                            <uni-badge class="fun-badge-style" :text="10" type="primary"> </uni-badge>
-                        </view>
-                        <text class="fun-text">库存</text>
                     </view>
                 </view>
             </view>
@@ -98,7 +72,7 @@
 				title: 'Hello',
                 normalBtnIconColor: '#A0A0A0',
                 activeBtnIconColor: '#101010',
-                activeBtnIndex: 0, // 当前激活的按钮菜单索引
+                activeBtnIndex: 1, // 当前激活的按钮菜单索引
                 indexBackgroundImage:indexBackgroundImage
 			}
 		},
